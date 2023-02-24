@@ -1,0 +1,255 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    font-family: "Open Sans", sans-serif;
+}
+
+body {
+    position: relative;
+    width: 90%;
+    background: #FFFFFF;
+    margin: 36px auto;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -24px;
+}
+.col {
+    padding: 0 24px;
+    width: calc(100% / 3);
+}
+
+#header {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    color: #5A5C63;
+}
+
+.header__slogan {
+    display: flex;
+    margin-top: 8px;
+}
+
+.header__logo > img {
+    height: 60px;
+}
+
+.header__slogan > img {
+    height: 24px;
+    margin-left: 6px;
+}
+
+.header__add {
+    padding: 8px;
+}
+.header__add:hover {
+    background-color: #ddd;
+    cursor: pointer;
+}
+
+/* Container */
+#container {
+    margin-top: 24px;
+}
+
+.item-title {
+    display: flex;
+    justify-content: space-between;
+    padding: 6px 12px;
+    border-radius: 4px;
+    color: #fff;
+}
+.item-title-quantity {
+    border-radius: 4px;
+    height: 20px;
+    width: 20px;
+    font-size: 14px;
+    text-align: center;
+}
+
+.item-border {
+    margin-top: 12px;
+}
+
+.todo .item-title {
+    background: #00A6DA;
+}
+.todo .item-title-quantity {
+    background: #00CDDA;
+}
+.todo .item-border {
+    border: 2px solid #00A6DA;
+}
+.doing .item-title {
+    background: rgba(204, 172, 3, 0.56);
+}
+.doing .item-title-quantity {
+    background: #DAB700;
+}
+.doing .item-border {
+    border: 2px solid #DAB700;
+}
+.finish .item-title {
+    background: #3BC057;
+}
+.finish .item-title-quantity {
+    background: #69CE7E;
+}
+.finish .item-border {
+    border: 2px solid #3BC057;
+}
+
+
+
+/* Item content*/
+.item-content-category {
+    display: flex;
+    justify-content: space-between;
+}
+.item-content-category p {
+    text-decoration-line: underline;
+    color: #4D8EFF;
+    font-size: 12px;
+}
+.list__active {
+    margin-top: 24px;
+}
+
+.item-content {
+    padding: 16px 24px;
+    background: #FFFFFF;
+    border-radius: 8px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.1));
+    margin-top: 16px;
+}
+.item-content:hover {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    cursor: pointer;
+}
+
+.item-content-action {
+    display: flex;
+}
+.item-content-action img {
+    width: 24px;
+    height: 24px;
+}
+.item-action-edit,
+.item-action-delete {
+    cursor: pointer;
+}
+.item-action-delete {
+    margin-left: 8px;
+}
+.item-content-title {
+    font-weight: 700;
+    color: #393939;
+    font-size: 16px;
+}
+.item-content-border {
+    border: 1px solid #DBDBDB;
+    width: 80%;
+    margin: 20px 0 12px;
+}
+
+
+.item-content-detail-desc {
+    font-size: 10px;
+}
+
+.item-content-detail-time {
+    display: flex;
+    align-items: center;
+    margin-top: 12px;
+}
+
+.item-content-detail-time p {
+    font-size: 10px;
+    margin-left: 6px;
+}
+
+
+/* Modal */
+.modal {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.35);
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+.modal--open {
+    display: flex;
+}
+
+.modal-container {
+    width: 420px;
+    min-height: 200px;
+    background-color: #fff;
+    padding: 12px;
+    animation: modalFadeIn ease-in 0.4s;
+}
+.modal-close {
+    float: right;
+    font-size: 24px;
+    cursor: pointer;
+    transition: all ease-in 0.2s;
+}
+.modal-close:hover i {
+    opacity: 0.7;
+}
+.modal-header {
+    font-size: 24px;
+    text-align: center;
+}
+.modal-body {
+    margin-top: 16px;
+    padding: 0 36px;
+}
+
+.modal-body input,
+.modal-body textarea,
+.modal-body button {
+    display: block;
+    width: 100%;
+    margin-bottom: 8px;
+    padding: 4px;
+}
+.border--red {
+    border-color: red;
+}
+
+
+@keyframes modalFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-150px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+.edit-modal-body-option {
+    display: flex;
+    justify-content: space-between;
+    margin: 12px 0;
+}
+.edit-modal-body-option div {
+    display: flex;
+    justify-content: space-around;
+}
+.edit-modal-body-option div input {
+    margin: 0 4px 0;
+}
