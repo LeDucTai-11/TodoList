@@ -23,8 +23,16 @@ const titleQuantities = document.querySelectorAll('.item-title-quantity');
 const setDataLocalStorage = () => {
     localStorage.setItem('dataList',JSON.stringify(dataList));
 }
-// const dataList = [];
-const dataList = JSON.parse(localStorage.getItem('dataList'));
+const dataList = [
+    {
+        id: 1,
+        category: 'Marketing',
+        title: 'Write SEO article for new product',
+        content: 'This is an existential moment for effective altruism and the rationalist community writ-large. ',
+        processID: 1,
+        time: Date(Date.now().toString()).slice(0, 15)
+    }
+];
 window.onload = () => {
     renderView(dataList);
 }
