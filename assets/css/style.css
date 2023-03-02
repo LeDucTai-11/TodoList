@@ -253,3 +253,12 @@ body {
 .edit-modal-body-option div input {
     margin: 0 4px 0;
 }
+
+
+@media (max-width: 840px) {
+    .col {
+        width: 100%;
+        margin-bottom: 36px;
+    }
+
+}
